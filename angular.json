@@ -33,6 +33,11 @@
             "assets": [
               {
                 "glob": "**/*",
+                "input": "./node_modules/pdfjs-dist/build",
+                "output": "./assets/"
+              },
+              {
+                "glob": "**/*",
                 "input": "public"
               }
             ],
@@ -89,6 +94,11 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
+              {
+                "glob": "**/*",
+                "input": "../node_modules/pdfjs-dist/build",
+                "output": "./assets/"
+              },
               {
                 "glob": "**/*",
                 "input": "public"
