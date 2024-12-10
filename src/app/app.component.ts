@@ -9,17 +9,13 @@ import {DOCUMENT} from '@angular/common';
   standalone: false,
   styleUrl: './app.component.css'
 })
-export class AppComponent implements AfterViewInit {
+export class AppComponent {
 
   file?: File;
   pdfPreviewImgData?: string
 
   constructor(@Inject(DOCUMENT) private document: Document) {
     GlobalWorkerOptions.workerSrc = `/assets/pdf.worker.min.mjs`;
-  }
-
-  ngAfterViewInit(): void {
-    //this.canvasContext = this.canvas?.nativeElement?.getContext('2d') as CanvasRenderingContext2D;
   }
 
   onChange(event: Event) {
